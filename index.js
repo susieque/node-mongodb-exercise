@@ -32,9 +32,8 @@ MongoClient.connect(url, { useUnifiedTopology: true }, (err, client) => {
 					console.log('Found Documents:', docs);
 
 					client.close(); //close the client.
-				});
-			}
-		);
+            });
+        });
 	});
 });
 
@@ -46,4 +45,3 @@ MongoClient.connect(url, { useUnifiedTopology: true }, (err, client) => {
 //When commmunicating between Node application and MongoDB server this is not a synchronous operation.
 //It takes time for that communication to happen, no matter how small. 
 //This kind of callback nesting isn't something we really want to do, check out why in the upcoming exercise.
-
